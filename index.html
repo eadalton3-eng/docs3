@@ -2,141 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doc's Towing and Recovery LLC | 24/7 Service | St. Louis Metro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Doc's Towing and Recovery LLC | 24/7 Emergency Roadside</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         html { scroll-behavior: smooth; }
         .hero-bg {
-            background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), 
-                        url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=1920');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                        url('truck1.jpg'); /* REPLACE WITH YOUR UPLOADED FILENAME */
+            background-size: cover; background-position: center;
         }
+        /* Mobile Bottom Bar Shadow */
+        .mobile-shadow { box-shadow: 0 -4px 20px rgba(0,0,0,0.3); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="bg-slate-50 text-slate-900 font-sans pb-20 md:pb-0">
 
-    <nav class="bg-white shadow-md sticky top-0 z-50 border-b-4 border-yellow-500">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-black tracking-tighter text-slate-900 uppercase">
+    <div class="bg-yellow-500 text-slate-900 text-center py-2 text-xs font-black uppercase tracking-widest">
+        <span class="animate-pulse">●</span> 24/7 Dispatch Active in St. Louis
+    </div>
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-black tracking-tighter uppercase">
                 <span class="text-yellow-500 italic">Doc's</span> TOWING
             </div>
-            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest text-slate-600">
-                <a href="#home" class="hover:text-yellow-600 transition">Home</a>
-                <a href="#services" class="hover:text-yellow-600 transition">Services</a>
-                <a href="#locations" class="hover:text-yellow-600 transition text-red-600">Our Locations</a>
-                <a href="#contact" class="hover:text-yellow-600 transition">Contact</a>
-            </div>
-            <a href="tel:3145035119" class="bg-red-600 text-white px-6 py-3 rounded font-black hover:bg-red-700 transition flex items-center shadow-lg">
+            <a href="tel:3145035119" class="hidden md:flex bg-red-600 text-white px-6 py-2 rounded-lg font-black hover:bg-red-700 transition items-center">
                 <i class="fa-solid fa-phone-flip mr-2"></i> 314-503-5119
             </a>
+            <div class="md:hidden text-2xl"><i class="fa-solid fa-bars"></i></div>
         </div>
     </nav>
 
-    <section id="home" class="hero-bg min-h-[75vh] flex items-center text-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl">
-                <div class="inline-flex items-center bg-yellow-500 text-slate-900 px-4 py-1 font-black text-sm rounded mb-6">
-                    <span class="animate-pulse mr-2 text-red-600 font-black">●</span> 24/7 DUAL-LOCATION DISPATCH
+    <section class="hero-bg min-h-[60vh] md:min-h-[80vh] flex items-center text-white px-4">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-7xl font-black mb-4 uppercase italic leading-tight">Fast Towing.<br><span class="text-yellow-500">Fair Prices.</span></h1>
+            <p class="text-lg md:text-2xl mb-8 text-gray-300 max-w-xl font-light">Stranded in St. John or Breckenridge Hills? Doc's is on the way 24/7.</p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <a href="tel:3145035119" class="bg-red-600 text-center text-white py-5 px-8 rounded-xl font-black text-xl shadow-xl">CALL MAIN LINE</a>
+                <a href="#locations" class="bg-white/10 text-center backdrop-blur-md border border-white/20 py-5 px-8 rounded-xl font-bold">OUR LOCATIONS</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-[100] p-4 bg-white/80 backdrop-blur-lg mobile-shadow border-t border-gray-200">
+        <div class="grid grid-cols-2 gap-3">
+            <a href="tel:3145035119" class="bg-slate-900 text-white text-center py-4 rounded-xl font-black text-sm flex flex-col items-center">
+                <span class="text-[10px] opacity-60 uppercase">St. John</span>
+                314-503-5119
+            </a>
+            <a href="tel:3145017500" class="bg-red-600 text-white text-center py-4 rounded-xl font-black text-sm flex flex-col items-center">
+                <span class="text-[10px] opacity-80 uppercase">Breckenridge</span>
+                314-501-7500
+            </a>
+        </div>
+    </div>
+
+    <section id="locations" class="py-16 bg-white px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-black uppercase italic mb-10 text-center">Dispatch Locations</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-slate-50 p-6 rounded-2xl border-2 border-gray-100">
+                    <h3 class="text-xl font-black text-yellow-600 uppercase">St. John</h3>
+                    <p class="text-gray-600 mb-4">2810 Walton Rd, 63114</p>
+                    <a href="tel:3145035119" class="text-2xl font-black block text-slate-900 underline">314-503-5119</a>
                 </div>
-                <h1 class="text-6xl md:text-8xl font-extrabold mb-6 leading-none uppercase italic tracking-tighter">
-                    Doc's <span class="text-yellow-500">Towing</span>
-                </h1>
-                <p class="text-2xl mb-10 text-gray-300 font-light max-w-2xl">Faster response times with two locations serving the St. Louis Metro area. Damage-free recovery, guaranteed.</p>
-                <div class="flex flex-wrap gap-6">
-                    <a href="tel:3145035119" class="bg-red-600 text-white px-10 py-5 rounded-xl font-black text-2xl hover:bg-red-700 transition shadow-2xl flex items-center group">
-                        <i class="fa-solid fa-phone mr-3 group-hover:shake"></i> MAIN: 314-503-5119
-                    </a>
+                <div class="bg-slate-50 p-6 rounded-2xl border-2 border-gray-100">
+                    <h3 class="text-xl font-black text-yellow-600 uppercase">Breckenridge Hills</h3>
+                    <p class="text-gray-600 mb-4">9408 Breckenridge Rd, 63314</p>
+                    <a href="tel:3145017500" class="text-2xl font-black block text-slate-900 underline">314-501-7500</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="locations" class="py-20 bg-slate-900 text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black uppercase italic text-yellow-500">Call Your Nearest Location</h2>
-                <p class="text-gray-400 mt-4 uppercase tracking-widest font-bold">24-Hour Roadside & Recovery Services</p>
+    <section class="py-16 bg-slate-900 text-white px-4">
+        <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="p-4 border border-white/10 rounded-xl">
+                <i class="fa-solid fa-truck-pickup text-yellow-500 text-2xl mb-2"></i>
+                <p class="text-xs font-bold uppercase">Emergency Tow</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="bg-slate-800 p-10 rounded-3xl border-2 border-slate-700 hover:border-yellow-500 transition-all shadow-xl group">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-16 h-16 bg-yellow-500 text-slate-900 rounded-2xl flex items-center justify-center text-3xl font-black italic">01</div>
-                        <span class="text-green-500 font-bold text-xs"><i class="fa-solid fa-circle text-[8px] mr-1"></i> TRUCKS READY</span>
-                    </div>
-                    <h3 class="text-3xl font-black mb-2 uppercase italic tracking-tighter text-yellow-500">St. John</h3>
-                    <p class="text-gray-300 mb-8 font-medium">2810 Walton Rd<br>St. John, MO 63114</p>
-                    <a href="tel:3145035119" class="block bg-slate-700 text-center py-5 rounded-xl text-2xl font-black hover:bg-red-600 transition mb-4">
-                        314-503-5119
-                    </a>
-                </div>
-
-                <div class="bg-slate-800 p-10 rounded-3xl border-2 border-slate-700 hover:border-yellow-500 transition-all shadow-xl group">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="w-16 h-16 bg-yellow-500 text-slate-900 rounded-2xl flex items-center justify-center text-3xl font-black italic">02</div>
-                        <span class="text-green-500 font-bold text-xs"><i class="fa-solid fa-circle text-[8px] mr-1"></i> TRUCKS READY</span>
-                    </div>
-                    <h3 class="text-3xl font-black mb-2 uppercase italic tracking-tighter text-yellow-500 text-nowrap">Breckenridge Hills</h3>
-                    <p class="text-gray-300 mb-8 font-medium">9408 Breckenridge Rd<br>Breckenridge Hills, MO 63314</p>
-                    <a href="tel:3145017500" class="block bg-slate-700 text-center py-5 rounded-xl text-2xl font-black hover:bg-red-600 transition mb-4">
-                        314-501-7500
-                    </a>
-                </div>
+            <div class="p-4 border border-white/10 rounded-xl">
+                <i class="fa-solid fa-battery-bolt text-yellow-500 text-2xl mb-2"></i>
+                <p class="text-xs font-bold uppercase">Jump Starts</p>
+            </div>
+            <div class="p-4 border border-white/10 rounded-xl">
+                <i class="fa-solid fa-lock-open text-yellow-500 text-2xl mb-2"></i>
+                <p class="text-xs font-bold uppercase">Lockouts</p>
+            </div>
+            <div class="p-4 border border-white/10 rounded-xl">
+                <i class="fa-solid fa-gas-pump text-yellow-500 text-2xl mb-2"></i>
+                <p class="text-xs font-bold uppercase">Fuel Delivery</p>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-black text-center mb-20 uppercase italic tracking-tighter">Full Service Recovery</h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="text-center">
-                    <div class="bg-yellow-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <i class="fa-solid fa-truck-pickup text-3xl text-slate-900"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold uppercase mb-4 italic">Flatbed Towing</h4>
-                    <p class="text-gray-500">Perfect for luxury cars, AWD vehicles, and high-value transport.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-yellow-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <i class="fa-solid fa-gas-pump text-3xl text-slate-900"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold uppercase mb-4 italic">Roadside Help</h4>
-                    <p class="text-gray-500">Fuel delivery, tire changes, and jump starts anywhere in St. Louis.</p>
-                </div>
-                <div class="text-center">
-                    <div class="bg-yellow-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <i class="fa-solid fa-lock text-3xl text-slate-900"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold uppercase mb-4 italic">Lockout Pros</h4>
-                    <p class="text-gray-500">Safe vehicle entry when you're locked out. No damage, fast arrival.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24 bg-red-600 text-white text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl md:text-7xl font-black mb-6 uppercase italic tracking-tighter">Stranded?</h2>
-            <p class="text-2xl mb-12 font-bold uppercase tracking-widest opacity-80 italic">One call to Doc's and help is on the way.</p>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-                <a href="tel:3145035119" class="bg-slate-900 px-12 py-8 rounded-2xl text-3xl md:text-5xl font-black hover:scale-105 transition shadow-2xl">
-                    314-503-5119
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-slate-950 py-12 text-center border-t border-slate-900">
-        <div class="container mx-auto px-6">
-            <div class="text-2xl font-black text-white mb-2 uppercase italic tracking-tighter">
-                <span class="text-yellow-500">Doc's</span> TOWING
-            </div>
-            <p class="text-xs font-bold text-slate-500 uppercase tracking-[0.5em] mb-8">Recovery Specialist LLC</p>
-            <p class="text-xs text-slate-600">© 2026 Doc's Towing & Recovery LLC. All rights reserved.</p>
-        </div>
+    <footer class="bg-white py-10 text-center border-t">
+        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">© 2026 Doc's Towing & Recovery LLC</p>
     </footer>
 
 </body>
