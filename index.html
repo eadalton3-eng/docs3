@@ -35,8 +35,42 @@
     <style>
         html { scroll-behavior: smooth; }
         .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-        .main-truck-img { width: 100%; max-width: 900px; height: auto; border-radius: 1.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); border: 4px solid #eab308; }
         .gallery-img { width: 100%; height: 350px; object-fit: cover; border-radius: 1rem; }
+
+        /* Rolling Collage Styles */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-300px * 5)); } /* Width of img * count */
+        }
+
+        .rolling-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0;
+            cursor: pointer;
+        }
+
+        .rolling-track {
+            display: flex;
+            width: calc(300px * 10); /* Double count for seamless loop */
+            animation: scroll 25s linear infinite;
+        }
+
+        .rolling-track img {
+            width: 280px;
+            height: 200px;
+            object-fit: cover;
+            margin: 0 10px;
+            border-radius: 1rem;
+            border: 3px solid #eab308;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+        }
+
+        .rolling-container:hover .rolling-track {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans pb-24 md:pb-0">
@@ -62,8 +96,22 @@
                 Heavy Semi <br><span class="text-yellow-500">Towing Specialist</span>
             </h1>
             
-            <div class="flex justify-center mb-12">
-                <img src="Docs.1.JPEG" class="main-truck-img" alt="Doc's Heavy Duty Towing Fleet St. Louis">
+            <!-- Rolling Picture Collage -->
+            <div class="rolling-container mb-12">
+                <div class="rolling-track">
+                    <!-- Original 5 Images -->
+                    <img src="Docs.1.JPEG" alt="Doc's Towing Fleet">
+                    <img src="Docs.2.jpg" alt="Heavy Recovery">
+                    <img src="Docs.3.jpg" alt="Semi Towing">
+                    <img src="Docs.4.jpg" alt="Equipment Hauling">
+                    <img src="Docs.5.jpg.jpeg" alt="Heavy Duty Specialist">
+                    <!-- Duplicate for Seamless Loop -->
+                    <img src="Docs.1.JPEG" alt="Doc's Towing Fleet">
+                    <img src="Docs.2.jpg" alt="Heavy Recovery">
+                    <img src="Docs.3.jpg" alt="Semi Towing">
+                    <img src="Docs.4.jpg" alt="Equipment Hauling">
+                    <img src="Docs.5.jpg.jpeg" alt="Heavy Duty Specialist">
+                </div>
             </div>
 
             <p class="text-lg md:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto font-medium uppercase tracking-wide">
@@ -72,7 +120,6 @@
             
             <div class="flex flex-col md:flex-row justify-center gap-6">
                 <a href="tel:3145035119" class="bg-red-600 text-white py-5 px-12 rounded-xl font-black text-2xl shadow-xl hover:bg-red-700 transition uppercase italic">Call Dispatch Now</a>
-                <a href="#quote" class="bg-white/10 text-white backdrop-blur-md border border-white/30 py-5 px-12 rounded-xl font-bold text-2xl uppercase italic">Get Heavy Quote</a>
             </div>
         </div>
     </section>
@@ -106,6 +153,7 @@
             </div>
         </div>
     </section>
+
     <section class="py-20 bg-slate-900 text-white">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
             <div>
